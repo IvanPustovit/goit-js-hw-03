@@ -4,7 +4,7 @@ const countTotalSalary = function (employees) {
     let total = 0
     const valuesArr = Object.values(employees)
     for (const number of valuesArr) {
-        valuesArr.length == 0 ? total = 0 : total += number
+        !valuesArr.length ? total = 0 : total += number
     }
     return total
 };

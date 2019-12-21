@@ -24,13 +24,13 @@ const products = [{
 
 const calculateTotalPrice = function (allProdcuts, productName) {
     let totalPrice = 0;
-    for (const obj of allProdcuts) {
-        for (const value in obj) {
-            obj[value] == productName ? totalPrice = obj.price * obj.quantity : ''
+    for (const obj of allProdcuts){
+        if(obj.name == productName){
+            totalPrice = obj.price * obj.quantity
         }
-    }
-    return totalPrice
-};
+    }return totalPrice
+}
+
 
 /*
  * Вызовы функции для проверки работоспособности твоей реализации.
